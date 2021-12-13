@@ -10,11 +10,11 @@
           <p>Nombre del titular de la tarjeta</p>
           <input type="text" class="form-control" name="name" required />
           <p>Número de tarjeta</p>
-          <input type="number" class="inputbox" pattern="[0-9]+" maxlength="16" name="card_number" id="card_number" required />
+          <input type="number" class="inputbox" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="[0-9]+" maxlength="16" name="card_number" id="card_number" required />
 
           <p>Tipo de tarjeta</p>
           <select class="inputbox" name="card_type" id="card_type" required>
-            <option value="">--Seleccione un tipo de tarjeta--</option>
+            <option selected="true" disabled="disabled" >--Seleccione un tipo de tarjeta--</option>
             <option value="Visa">Visa</option>
             <option value="RuPay">American Express</option>
             <option value="MasterCard">MasterCard</option>
